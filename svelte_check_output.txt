@@ -1,0 +1,116 @@
+
+> debatium@0.0.1 check
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
+
+Loading svelte-check in workspace: /Users/vominhlong/Debatium
+Getting Svelte diagnostics...
+
+/Users/vominhlong/Debatium/src/routes/api/spars/[id]/+server.ts:28:10
+Error: Cannot find name 'and'. 
+		.innerJoin(user, eq(sparParticipant.userId, user.id))
+		.where(and(eq(sparParticipant.sparId, params.id), ne(sparParticipant.status, 'rejected')));
+
+/Users/vominhlong/Debatium/src/routes/api/spars/[id]/+server.ts:28:53
+Error: Cannot find name 'ne'. 
+		.innerJoin(user, eq(sparParticipant.userId, user.id))
+		.where(and(eq(sparParticipant.sparId, params.id), ne(sparParticipant.status, 'rejected')));
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:8:19
+Warn: This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally (svelte)
+
+	let bio = $state(data.profile?.bio || '');
+	let experienceLevel = $state(data.profile?.experienceLevel || 'Beginner');
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:9:31
+Warn: This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally (svelte)
+	let bio = $state(data.profile?.bio || '');
+	let experienceLevel = $state(data.profile?.experienceLevel || 'Beginner');
+	let preferredFormats = $state<string[]>(data.profile?.preferredFormats || []);
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:10:42
+Warn: This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally (svelte)
+	let experienceLevel = $state(data.profile?.experienceLevel || 'Beginner');
+	let preferredFormats = $state<string[]>(data.profile?.preferredFormats || []);
+	let interests = $state(data.profile?.interests?.join(', ') || '');
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:11:25
+Warn: This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally (svelte)
+	let preferredFormats = $state<string[]>(data.profile?.preferredFormats || []);
+	let interests = $state(data.profile?.interests?.join(', ') || '');
+	let honors = $state<Honor[]>(data.profile?.honors || []);
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:12:31
+Warn: This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally (svelte)
+	let interests = $state(data.profile?.interests?.join(', ') || '');
+	let honors = $state<Honor[]>(data.profile?.honors || []);
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:238:9
+Warn: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+							<div class="sm:col-span-2">
+								<label class="mb-1 block text-xs text-surface-400">Tournament Name *</label>
+								<input
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:248:9
+Warn: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+							<div>
+								<label class="mb-1 block text-xs text-surface-400">Year</label>
+								<input
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:257:9
+Warn: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+							<div>
+								<label class="mb-1 block text-xs text-surface-400">Scale</label>
+								<Select.Root type="single" bind:value={newHonor.scale}>
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:274:9
+Warn: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+							<div>
+								<label class="mb-1 block text-xs text-surface-400">Format</label>
+								<Select.Root type="single" bind:value={newHonor.format}>
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:291:9
+Warn: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+							<div>
+								<label class="mb-1 block text-xs text-surface-400">Role</label>
+								<Select.Root type="single" bind:value={newHonor.role}>
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:319:10
+Warn: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+								<div>
+									<label class="mb-1 block text-xs text-surface-400">Breaking Rank</label>
+									<input
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:328:10
+Warn: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+								<div>
+									<label class="mb-1 block text-xs text-surface-400">Achievements</label>
+									<input
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:338:10
+Warn: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+								<div>
+									<label class="mb-1 block text-xs text-surface-400">Judge Type</label>
+									<Select.Root type="single" bind:value={newHonor.judgeType}>
+
+/Users/vominhlong/Debatium/src/routes/app/profile/+page.svelte:352:10
+Warn: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+								<div>
+									<label class="mb-1 block text-xs text-surface-400">Highest Rank</label>
+									<Select.Root type="single" bind:value={newHonor.highestRank}>
+
+====================================
+svelte-check found 2 errors and 14 warnings in 2 files
