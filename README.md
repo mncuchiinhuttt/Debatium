@@ -63,11 +63,12 @@ The app will be available at `http://localhost:5173`.
 ## 📦 Available Scripts
 
 - `npm run dev`: Starts the Vite development server.
-- `npm run build`: Creates a production build of the application.
+- `npm run build`: Creates a production build of the application (runs `db:init`, so `DATABASE_URL` must be set).
 - `npm run preview`: Previews the production build locally.
 - `npm run check`: Runs SvelteKit sync and `svelte-check`.
 - `npm run lint`: Checks for linting and formatting issues.
 - `npm run format`: Automatically formats the codebase with Prettier.
+- `npm run db:init`: Initializes/pushes the database schema in force mode for deployments.
 - `npm run db:push`: Pushes schema changes to the database via Drizzle.
 - `npm run db:studio`: Opens Drizzle Studio to explore your database.
 
