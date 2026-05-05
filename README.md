@@ -45,6 +45,7 @@ Debatium is an AI-powered debating platform designed for competitive and practic
     Create a `.env` file in the root directory and add the necessary environment variables (refer to `.env.example` if available).
     ```env
     DATABASE_URL=your_neon_db_url
+    DB_INIT_FORCE=1 # set in deploy env to allow db:init during build
     BETTER_AUTH_SECRET=your_auth_secret
     OPENAI_API_KEY=your_openai_key
     # Add other necessary keys here
@@ -63,11 +64,12 @@ The app will be available at `http://localhost:5173`.
 ## 📦 Available Scripts
 
 - `npm run dev`: Starts the Vite development server.
-- `npm run build`: Creates a production build of the application.
+- `npm run build`: Creates a production build of the application (runs `db:init` when `DATABASE_URL` and `DB_INIT_FORCE=1` are set).
 - `npm run preview`: Previews the production build locally.
 - `npm run check`: Runs SvelteKit sync and `svelte-check`.
 - `npm run lint`: Checks for linting and formatting issues.
 - `npm run format`: Automatically formats the codebase with Prettier.
+- `npm run db:init`: Initializes/pushes the database schema in force mode when `DATABASE_URL` and `DB_INIT_FORCE=1` are set.
 - `npm run db:push`: Pushes schema changes to the database via Drizzle.
 - `npm run db:studio`: Opens Drizzle Studio to explore your database.
 
